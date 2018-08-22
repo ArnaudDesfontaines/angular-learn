@@ -1,3 +1,19 @@
-<p>
-  convert works!{{test()}}
-</p>
+<div>
+
+  <form #myForm="ngForm">
+    <input [(ngModel)]="number" name="input">
+    <select [(ngModel)]="selectedOption" name="inputValue">
+      <option *ngFor="let g of globalUnits" [ngValue]="g">{{g}}</option>
+    </select>
+  <br/>
+    <br/>
+    <select [(ngModel)]="selectedOption2" name="OutputValue">
+      <option *ngFor="let g of globalUnits" [ngValue]="g">{{g}}</option>
+    </select>
+    <br/>
+    <button >OK</button>
+
+    ça fait {{globalConvert(number,selectedOption,selectedOption2) }}
+
+  </form>
+</div>
