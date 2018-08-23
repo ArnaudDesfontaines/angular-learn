@@ -1,0 +1,23 @@
+<!--<div>
+  <p>
+    <span *ngFor="let c of service.coins">{{c.name}}</span></p>
+  <span></span>
+  <span></span>
+</div> -->
+
+<table>
+  <thead>
+  <tr>
+    <th>Nom</th>
+    <th>Symbole</th>
+    <th>Valeur</th>
+  </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let c of service.coins">
+    <td>{{c.name}}</td>
+    <td> {{c.symbol}}</td>
+    <td> {{c.value}}</td>
+  </tr>
+  </tbody>
+</table>
