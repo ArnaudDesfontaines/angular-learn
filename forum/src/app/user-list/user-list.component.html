@@ -1,0 +1,23 @@
+<!--
+<table>
+  <thead>
+  <tr>
+    <th>User</th>
+    <th>Email</th>
+    <th>Admin</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let c of service.users">
+    <td>{{c.name}}</td>
+    <td>{{c.email}}</td>
+    <td>{{c.admin}}</td>
+  </tr>
+  </tbody>
+</table>
+-->
+
+<app-user *ngFor="let u of service.users"  [user]="u" ></app-user>
+
+
+Loggué : {{service.loggedPerson}}

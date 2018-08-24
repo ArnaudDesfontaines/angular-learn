@@ -12,18 +12,6 @@ export class CryptoComponent implements OnInit {
     service.fetchCryptoPrices();
   }
 
-  writeName(){
-
-  }
-
-  writeSymbol(){
-
-  }
-
-  writeValue(){
-
-  }
-
   ngOnInit() {
   }
 
