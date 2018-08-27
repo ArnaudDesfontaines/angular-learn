@@ -2,8 +2,9 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 
 export type User ={
-  name: String;
-  email: String;
+  id: number;
+  name: string;
+  email: string;
   admin : boolean
 }
 
@@ -12,8 +13,8 @@ export type User ={
 })
 export class UserService {
 
-  users: User[];
-  loggedPerson: string
+  users: User[]=[];
+  loggedPerson: User;
 
   constructor(public http: HttpClient) {}
 
@@ -22,9 +23,9 @@ export class UserService {
       .subscribe((r: any[]) =>this.users = r);
   }
 
-  loggedIn(name) {
-    console.log(name);
-    this.loggedPerson = name;
+  loggedIn(user:User) {
+    console.log(user.name + " rep1");
+    this.loggedPerson = user;
   }
 
   isLoggedIn(){

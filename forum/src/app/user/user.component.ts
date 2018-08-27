@@ -9,6 +9,7 @@ import {User, UserService} from "../user.service";
 export class UserComponent implements OnInit {
 
   @Input() user:User
+
   constructor(public service:UserService) {
   }
 

@@ -1,4 +1,12 @@
 
-<app-user-list></app-user-list>
+<!-- <app-user-list></app-user-list> -->
 
+<app-tab></app-tab>
 
+<span *ngIf="service.tabChoice === 'User' ">
+    <app-user-list></app-user-list>
+  </span>
+
+<span *ngIf="service.tabChoice === 'Topic'">
+    <app-basic-topic-list></app-basic-topic-list>
+  </span>

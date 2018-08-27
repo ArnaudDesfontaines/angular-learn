@@ -10,7 +10,8 @@ export class UserListComponent implements OnInit {
 
   constructor(public service:UserService) {
 
-    service.fetchUsers()
+    service.fetchUsers();
+
   }
 
   ngOnInit() {

@@ -1,0 +1,24 @@
+<h1 (click)="service.isActive(topic.id)">{{topic.title}}</h1> by
+<span>{{topic.user.name}}</span> :
+
+<br/>
+<p *ngIf="topic.content">"{{topic.content}}"</p>
+<br/>
+
+<body *ngIf="service.activeTopic === topic.id">
+  <h2>Comments :</h2>
+  <div *ngFor="let c of topic.comments">
+    <p>"{{c.content}}"</p>
+    <span *ngIf="!c.anonymous">by {{c.user.name}}</span>
+  </div>
+  <form *ngIf="service2.isLoggedIn()">
+    Comment:
+    <input type="text" [(ngModel)]="commentContent" name="commentContent" required>
+    <button (click)="checkComment(topic.id)">Submit</button>
+  </form>
+
+</body>
+
+<br/>
+<br/>
+
